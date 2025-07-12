@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bite-Me Cafe</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <style>
+            h1 {
+               flex-direction: row;
+               padding: 0px; 
+               display: flex;
+               
+               font-size: 50px;
+            }
+            .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+                    }
+
+            .brand-text {
+                color: rgb(194, 139, 36);
+                font-size: 60px;
+                font-family: Georgia, serif;
+                white-space: nowrap; 
+            }
+
+            header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-color: black;
+            padding-top: 0px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 30px;
+                padding-right: 200px;
+                padding-left: 100px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-family: cursive;
+                padding-bottom: 20px;
+                padding-top: 40px;
+            }
+            .nav-links button {
+                background-color: rgb(163, 124, 72);
+                color:bisque;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: none;
+                font-size: 10px;
+                cursor: pointer;
+                font-family: cursive;
+                white-space: nowrap; 
+                             
+
+            }
+            .nav-links button:hover
+             {
+            background-color: rgb(226, 187, 130);
+             }
+
+             .search-logout-container {
+            display: flex;
+            align-items: center;
+            gap: 50px; 
+            padding-right: 40px;
+            justify-content: space-between;
+            padding-bottom: 20px;
+                padding-top: 40px;
+            }
+
+    
+            .search-bar input[type="text"]
+             {
+            padding: 8px 14px;
+            border-radius: 20px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+            width: 200px;
+            gap: 10px;
+            
+            }
+
+            .search-bar input[type="submit"] 
+            {
+            padding: 8px 14px;
+            margin-left: 8px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(163, 124, 72);
+            color: bisque;
+            font-size: 14px;
+            cursor: pointer;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            gap: 10px;
+            
+            }
+
+            .search-bar input[type="submit"]:hover {
+            background-color: rgb(226, 187, 130);
+            }
+            .search-bar { 
+                padding-left: 30px;
+                padding-right: 200px;
+                display: flex;
+                align-items: center;
+                padding-bottom: 20px;
+                padding-top: 40px;
+                gap: 10px;
+            }
+            .brand-logo {
+                padding-right: 20px;
+                
+            }
+
+            .logout-btn {
+                background-color: rgb(163, 124, 72);
+                color:bisque;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: none;
+                font-size: 14px;
+                cursor: pointer;
+                font-family: cursive;
+                white-space: nowrap;
+                gap: 10px; 
+                
+            }
+            
+            .hungry-container button{
+                background-color: black;
+                color: black;
+                display: flex;
+                align-items: center;
+                border-color: rgb(185, 168, 146);
+                background-color: black;
+                border-radius: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: center;
+                font-size: 13px;
+                width: 80px;
+                font-family: cursive;
+            }
+            .hungry-container {
+                padding-left: 47px;
+                padding-top: 40px;
+                padding-bottom: -30px;
+                padding-top: 10px;
+            }
+        
+            .quote-container {
+                color: bisque ;
+                font-size: 75px;
+                padding-left: 20px;
+                padding-top: 0px;
+                margin-top: 0;
+                padding-bottom: 0px;
+                
+            }
+            .book-container {
+                justify-content: space-between;
+                display: flex;
+                gap: 10px;
+                padding-right: 150px;
+                padding-left: 150px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-family: cursive;
+                padding-bottom: 20px;
+                padding-top: 40px;
+                white-space: nowrap;
+
+            }
+            .book-container button {
+                padding-right: 100px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                background-color: rgb(163, 124, 72);
+                align-items:flex-start;
+                font-size: 15px;
+                
+            }
+            
+
+            .main-container {
+                display: flex;
+                align-items:flex-start;
+                justify-content: space-between;
+                padding: 10px 90px;
+                gap: 30px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                min-height: 80vh;
+
+
+            }
+
+            .image-container img {
+            max-width: 800px;
+            width: 720px;
+            height: 730px;
+            border-radius: 50px;
+            padding-left: 80px;
+
+            }
+
+            .text-container {
+                text-align: center;
+                border-radius: 50px ; 
+
+                
+            }
+
+            .gallery {
+                display: flex;
+                gap: 40px;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 40px;
+                padding-top: 100px;
+                flex-wrap: wrap;
+                
+            }
+
+            .card {
+                width: 300px;
+                text-align: center;
+                color: bisque;
+                font-family: cursive;
+                padding-left: 10px;
+            }
+
+            .card img {
+                width: 100%;
+                height: auto;
+                border: 5px solid orange;
+                border-radius: 20px;
+            }
+
+            .card-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                gap: 10px;
+            }
+
+            .card p {
+                font-size: 14px;
+                margin: 0;
+                flex: 1;
+                text-align: left;
+            }
+
+            .order-btn {
+                background-color: rgb(163, 124, 72);
+                color: bisque;
+                border: none;
+                border-radius: 20px;
+                padding: 5px 15px;
+                cursor: pointer;
+                font-family: cursive;
+                white-space: nowrap;
+            }
+
+            .order-btn:hover {
+                background-color: rgb(226, 187, 130);
+            }
+
+             .gallery1 {
+                display: flex;
+                gap: 40px;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 40px;
+                padding-top: 100px;
+                flex-wrap: wrap;
+                
+            }
+
+            .card1 {
+                width: 300px;
+                text-align: center;
+                color: bisque;
+                font-family: cursive;
+                padding-left: 10px;
+            }
+
+            .card1 img {
+                width: 100%;
+                height: auto;
+                border: 5px solid orange;
+                border-radius: 20px;
+            }
+
+            .card-content1 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                gap: 10px;
+            }
+
+            .card1 p {
+                font-size: 14px;
+                margin: 0;
+                flex: 1;
+                text-align: left;
+            }
+
+            .order-btn1 {
+                background-color: rgb(163, 124, 72);
+                color: bisque;
+                border: none;
+                border-radius: 20px;
+                padding: 5px 15px;
+                cursor: pointer;
+                font-family: cursive;
+                white-space: nowrap;
+            }
+
+            .order-btn1:hover {
+                background-color: rgb(226, 187, 130);
+            }
+               
+            
+             .gallery2 {
+                display: flex;
+                gap: 40px;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 40px;
+                padding-top: 100px;
+            
+                
+            }
+
+            .card2 {
+                width: 300px;
+                text-align: center;
+                color: bisque;
+                font-family: cursive;
+                padding-left: 10px;
+            }
+
+            .card2 img {
+                width: 100%;
+                height: auto;
+                border: 5px solid orange;
+                border-radius: 20px;
+            }
+
+            .card-content2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                gap: 10px;
+            }
+
+            .card2 p {
+                font-size: 14px;
+                margin: 0;
+                flex: 1;
+                text-align: left;
+            }
+
+            .order-btn2 {
+                background-color: rgb(163, 124, 72);
+                color: bisque;
+                border: none;
+                border-radius: 20px;
+                padding: 5px 15px;
+                cursor: pointer;
+                font-family: cursive;
+                white-space: nowrap;
+            }
+
+            .order-btn2:hover {
+                background-color: rgb(226, 187, 130);
+            }
+
+
+            .about-container img {
+                padding-top: 0px;
+                
+            }
+            
+            .footer {
+                background-color:rgb(194, 139, 36) ;
+                display: flex;
+                align-items: center;
+                padding: 20px 40px;
+                height: 150px;
+            }
+            .footer-logo {
+                height: 120px;
+                width: 180px;
+                margin-right: 20px;
+                align-self: center;
+                padding-left: 40px;
+            }
+
+            .footer-contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 350px;
+                
+                }
+
+                .footer-text {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px; 
+                color: black;
+                }
+
+                .footer-details p {
+                margin: 5px 0; 
+                font-size: 18px;
+                }
+
+                .follow-details {
+                    display: flex;
+                    gap: 15px;
+                    padding-top: 10px;
+                }
+
+                .follow-footer {
+                    padding-left: 120px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 10px; 
+                    color: black;
+                    padding-bottom: 40px;
+                }
+
+                .para-container {
+                    padding-left: 30px;
+                     white-space: nowrap;
+                     font-size: 19px;
+                   
+                }
+                
+        </style>
+    </head>
+    <body style="background-color: black;     
+    margin: 0;
+     padding: 0; 
+     min-height: 100vh; ">
+        <header>
+        <div class="logo-container">
+        <span class="brand-text" style="color: rgb(194, 139, 36); font-size: 50px;">Bite-Me</span>
+        <img src="logo.jpg" height="80"  class="brand-logo">
+    </div>
+        <div class="nav-links" style="background-color: black; color: bisque;">
+        <a href="">
+            <button>Home</button>
+        </a>
+        <a href="">
+            <button>Menu</button>
+        </a>
+        <a href="">
+            <button>About Us</button>
+        </a>
+        <a href="">
+            <button>Contact</button>
+        </a>
+        </div>
+
+        <div class="search-logout-container">
+        <form class="search-bar" action="#" method="get">
+        <input type="text" name="search" placeholder="Search...">
+        <input type="submit" value="Go" style="font-family: cursive;"/>
+        
+
+        
+        <a href="">
+            <button type="button" class="logout-btn">Logout</button>
+        </a>
+        </form>
+        </div>
+        </header>
+        
+        <main>
+            <section>
+        <div class="hungry-container">
+            <a href="">
+                <button style="background-color: black; color: bisque;">hungry ?</button>
+            </a>
+        </div>
+
+        <div class="main-container">
+        <div class="quote-container">
+            <p style="color: bisque;font-family: cursive;">Savor the flavor,<br> love the vibe...</p>
+            <p style="color: bisque; font-size: 20px; padding-bottom: 10px;">Here You Will Find All The Best Quality And Pure Food. Order Now To Satisfy Your Hunger Pangs..</p>
+            <div class="hungry-container">
+            <div class="book-container">
+                <a href="">
+                 <button style="background-color: rgb(163, 124, 72); color: rgb(47, 29, 8);">Order Now</button>
+                </a>
+                <a href="">
+
+                <button style="background-color: black; color: bisque;">Explore Now</button>
+                
+            </a>
+            </div>
+        </div>
+
+        </div>
+        
+               
+        <div class="image-container" >
+            
+                <img src="lemoncoffeee.jpg"  alt="lemon coffee">
+            
+        </div>
+        </section>   
+        <section>
+            <p class="text-container" style="text-align: center; padding-top: 60px;">
+            <span class="text-bisque" style="color: bisque; text-align: center; padding-top: 200px; font-size: 35px; font-family: cursive;">Check our </span>
+            <b><span class="text-orange" style="color: rgb(163, 124, 72); text-align: center; padding-top: 200px; font-size: 45px; font-family: cursive;">Cafe</span></p></b>
+            </p>
+
+            <img src="waffle.jpg" style="width: 150px; height: 150px; border-radius: 50%; padding-left: 150px; border-radius: 30px; padding-top: 50px;">
+            <img src="coffeee.jpeg" style="width: 150px; height: 150px; border-radius: 50%; padding-left: 150px; border-radius: 30px; padding-top: 50px;">
+            <img src="croissont.jpeg" style="width: 150px; height: 150px; border-radius: 50%; padding-left: 150px; border-radius: 30px; padding-top: 50px;">
+            <img src="pizzza.jpg" style="width: 150px; height: 150px; border-radius: 50%; padding-left: 150px; border-radius: 30px; padding-top: 50px;">
+            <img src="chicken burger.jpeg" style="width: 150px; height: 150px; border-radius: 50%; padding-left: 150px; border-radius: 30px; padding-top: 50px;">
+
+            <div class="gallery" style="padding-top:100px ; padding-bottom: 5px;">
+                <div class="card" >
+                    <img src="momo.jpeg" alt="veg momos" >
+                    <div class="card-content">
+                    <p >Soft and juicy steamed veg momos served with spicy red chutney... </p>
+                        <button class="order-btn">Order Now</button>
+                    </div>                
+                </div>
+                <div class="card" >
+                    <img src="Caprese Sandwich.jpeg" alt="Baguette Sandwich" style="height: 365px; ">
+                    <div class="card-content">
+                    <p>Crispy baguette sandwich layered with fresh mozzarella, tomatoes, arugula, and pesto... </p>
+                    <button class="order-btn">Order Now</button>
+                    </div>
+                    </div>
+                  <div class="card" >
+                    <img src="belgian waffle.jpeg" alt="belgian" style="height: 365px; ">
+                    <div class="card-content">
+                    <p>Crispy Belgian waffles topped with fresh berries and dusted with powdered sugar...</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+              <div class="card">
+                    <img src="classic cheeseburger….jpeg" alt="classic burger" style="height: 365px; ">
+                    <div class="card-content">
+                    <p>Juicy grilled cheeseburger stacked with fresh lettuce, tomato, and dripping cheddar goodness...</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="gallery1" style="padding: top =50px; padding-bottom: 30px;">
+                <div class="card1" >
+                    <img src="chicken popcorn.jpeg" alt="popcorn" style="height: 365px; " >
+                    <div class="card-content1">
+                    <p >Crispy golden chicken bites served hot with creamy mustard dipping sauce... </p>
+                        <button class="order-btn1">Order Now</button>
+                    </div>                
+                </div>
+                <div class="card1" >
+                    <img src="soup.jpeg" alt="soup" style="height: 365px; ">
+                    <div class="card-content1">
+                    <p>Moist chocolate muffins topped with crunchy crumble and a drizzle of rich fudge... </p>
+                    <button class="order-btn1">Order Now</button>
+                    </div>
+                    </div>
+                  <div class="card1" >
+                    <img src="pancake.jpeg" alt="pancake" style="height: 365px; ">
+                    <div class="card-content1">
+                    <p>Crispy Belgian waffles topped with fresh berries & dusted with powdered sugar...</p>
+                    <button class="order-btn1">Order Now</button>
+                </div>
+            </div>
+              <div class="card1">
+                    <img src="Chocolate Croissant.jpeg" alt="chocolate croissont" style="height: 365px; ">
+                    <div class="card-content1">
+                    <p>Juicy grilled cheeseburger stacked with fresh lettuce, tomato, and dripping cheddar goodness...</p>
+                    <button class="order-btn1">Order Now</button>
+                </div>
+            </div>
+            </div>
+
+            <div class="gallery2" style="padding-top: 60px; padding-bottom: 10px;" >
+                <div class="card2" >
+                    <img src="strawberrysmottie.jpeg" alt="strawberrysmottie" style="height: 365px; ">
+                    <div class="card-content2">
+                    <p >Decadent chocolate Refreshing strawberry smoothie blended to perfection—sweet, creamy, and summer in a glass...</p>
+                        <button class="order-btn2">Order Now</button>
+                    </div>                
+                </div>
+                <div class="card2" >
+                    <img src="lemon tea.jpeg" alt="lemon" style="height: 365px; ">
+                    <div class="card-content2">
+                    <p>Soothing ginger lemon tea infused with mint—your cozy wellness companion in a cup...  </p>
+                    <button class="order-btn2">Order Now</button>
+                    </div>
+                    </div>
+                  <div class="card2" >
+                    <img src="Strawberry Cheesecake.jpeg" alt="Cheesecake" style="height: 365px; ">
+                    <div class="card-content2">
+                    <p>Creamy strawberry cheesecake topped with fresh berries and mint for a luscious dessert moment...</p>
+                    <button class="order-btn2">Order Now</button>
+                </div>
+            </div>
+              <div class="card2">
+                    <img src="Ice Cream Sundae.jpeg" alt="ice cream Sundae" style="height: 365px; ">
+                    <div class="card-content2">
+                    <p>Decadent chocolate cherry sundae layered with fudge, whipped cream, and juicy cherries..</p>
+                    <button class="order-btn2">Order Now</button>
+                </div>
+            </div>
+            </div>
+            
+        </section>  
+        <section>
+
+            <div class="about-container" style="padding: 50px 120px; gap: 40px;display: flex; align-items: flex-start; justify-content: space-between;">
+                <div style="flex:1;">
+                <h2 style="color: rgb(163, 124, 72); font-size: 35px; font-family: cursive "><b> About Us &#x1F37D;&#9749;</h2></b>
+                <p style="color: bisque; font-size: 18px; line-height: 40px; padding-top: 10px; font-family: Georgia, serif;">
+                     At Bite-Me Café, every dish is sprinkled with love and a dash of fun! 
+                     From crispy waffles to juicy burgers, our menu is a rollercoaster of mouthwatering 
+                     flavors. We believe good food = good mood, so we cook with heart and serve with a 
+                     smile. Hygiene is our top priority — spotless kitchens and fresh ingredients, always! 
+                     Whether you’re here for a quick snack or a cozy chat, we make every bite memorable.
+                      Our café is your happy place, where cravings meet comfort and friends become family. 
+                     So grab a seat, dig in, and let your taste buds<br> party!!!..&#x1F355;&#x1F355;</p>
+                     <b><p style="color: rgb(163, 124, 72); font-size: 25px; font-family: cursive;">“Bite into joy, sip the vibe – only at Bite-Me Café!” <br style="color: bisque;">☕☕....</p></b>
+                       
+            </div>
+            <div style="flex:1; text-align: right;">
+            <img src="chef5.jpeg" style="width: 590px; height: 340px;border-radius: 3S0px; padding-top: 80px; ">
+            </div>
+            </div>
+
+        </section>  
+ 
+        </main>
+
+        <footer>
+            <div class="footer">
+            <img src="logoo1.png" alt="Bite Me Logo" class="footer-logo" style="height: 120px;">
+            <p class="para-container">“Every bite a memory, every sip a smile<br> — Bite-Me Café is where flavor meets feeling....”</p>
+            <div class="footer-contact">
+            <div class="footer-text" >Contact Us&#x1F4DE;</div>
+            <div class="footer-details">
+                <p>+91 9515470364 </p>
+                <p> velpulausha04@gmail.com</p>
+            </div>
+            </div>
+            <div class="follow-footer">
+                <div class="text-footer">Follow Us</div>
+                <div class="follow-details" >
+                    <img src="fb.jpeg"  class="facebook-logo" style="width: 20px; height: 20px;">
+                    <img src="instagram.jpeg" class="instagram-logo" style="width: 20px; height: 20px;">
+                    <img src="twitter.jpeg"  class="twitter-logo" style="width: 20px; height: 20px;">
+                </div>
+            </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>

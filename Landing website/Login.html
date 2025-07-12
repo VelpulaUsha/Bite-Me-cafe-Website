@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bite-Me Cafe</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <style>
+            h1 {
+                text-align: center;
+                font-size: 70px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding-bottom: 0px;
+            }
+            h2 {
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                padding-bottom: 0px;
+
+            }
+            
+            label {
+            font-size: 18px;
+            margin-bottom: 6px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(151, 115, 68);
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"]
+            {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: bisque;
+            border: 2px solid #999;
+            box-sizing: border-box;
+            text-align: center;
+
+        
+            }
+            .name-container {
+            display: flex;
+            flex-direction: column;           
+            width: 530px;
+            margin: 0 auto;
+            margin-top: 30px;
+            font-size: 20px;
+            }
+
+            .email-container {
+            display: flex;
+            flex-direction: column;  
+            justify-content: center;
+            margin-top: 20px;
+            margin: 0 auto;
+
+            
+            }
+            .email-container {
+            width: 530px; 
+            }
+            .email-container input {
+            width: 100%;
+            }
+
+            .password-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20px;   
+            margin: 0 auto;        
+            }
+            .password-container {
+            width: 530px; 
+            }
+            .password-container input {
+            width: 100%;
+            }
+
+            .reminder-container {
+                text-align: center;
+                flex-direction: row;
+                justify-content: center;
+                padding: 2px;
+                border-radius: 20px;
+                width: 1240px;                
+            }
+            input[type="checkbox"] {
+            margin-right: 10px;
+            }
+
+             .button-container{
+                text-align: center;
+                padding-top: 16px;
+                border-radius: 20px;
+                width: 230px;
+                padding-left: 700px;
+            }
+                       
+        </style>
+    </head>
+    <body style="background-color: black;">
+        <div><h1 style="color: rgb(194, 139, 36);"font-size="18" style="margin-bottom: 0;">Bite-Me <img src="logo.jpg" width="200"></h1></div>
+        <div><h2 style="color: rgb(194, 139, 36) ; font-family: cursive;">Login</h2></div>
+
+        <div class="name-container"><label for="flname" style="font-size: 20px; font-family: cursive;">Full Name</label>
+        <input type="text" id="flname" name="flname" placeholder="Full Name" text-align="center" required><br>
+        </div>
+        
+        <div class="email-container">     
+        <label for="address" style="font-size: 20px; font-family: cursive;">Email Address</label>
+        <input type="email" id="address" name="address" placeholder="Email Address" style="display: flex;" style="background-color: bisque; color: bisque;"  required><br>
+        </div>
+        
+        <div class="password-container">     
+        <label for="password" style="font-size: 20px;font-family: cursive;">Create Password</label>
+        <input type="password" id="password" name="password" placeholder="Create Password" style="display: flex;" required><br>
+        </div>
+
+        <div class="reminder-container">
+        <input type="checkbox" id="box" style="color: bisque;">
+        <label for="box"  style="font-size: 25px; font-family: cursive;">Reminder Me?</label>
+        </div>
+
+        <div class="button-container">
+        <button onclick="window.location.href='entercafe.html'" style="background-color: rgb(163, 124, 72); color: bisque; padding: 10px; border-radius: 20px; width: 180px; font-size: 18px; font-family: cursive;">Enter to Cafe</button>
+        </div>
+    </body>
+</html>
